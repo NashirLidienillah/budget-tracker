@@ -56,5 +56,5 @@ Penggunaan AI secara signifikan mempercepat proses pengembangan dan memungkinkan
 ![Tampilan Halaman Utama](https://github.com/NashirLidienillah/budget-tracker/blob/main/dashboard.png)
 *Tampilan Halaman Dashboard*
 
-![Tampilan Halaman Riwayat](https://placehold.co/600x400/a5b4fc/374151?text=Screenshot+Riwayat)
+![Tampilan Halaman Riwayat](https://github.com/NashirLidienillah/budget-tracker/blob/main/history.png)
 *Tampilan Halaman Riwayat dengan Grafik dan Filter*
