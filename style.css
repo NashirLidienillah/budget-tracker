@@ -1,0 +1,112 @@
+/* Global Font */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Transaction Item Styling */
+.transaction-item.income {
+    border-left: 5px solid #2ecc71;
+}
+
+.transaction-item.expense {
+    border-left: 5px solid #c0392b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Action Buttons: Edit & Delete */
+.delete-btn, .edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: color 0.2s ease-in-out;
+}
+.delete-btn:hover { color: #c0392b; }
+.edit-btn:hover { color: #3498db; }
+
+/* Input Form Tabs */
+.tab-btn {
+    border: 1px solid #e5e7eb;
+    border-bottom: none;
+    padding: 0.75rem 1rem;
+    background-color: #f3f4f6;
+    color: #6b7280;
+    transition: all 0.3s ease;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.tab-btn.active {
+    background-color: white;
+    font-weight: 600;
+}
+.tab-btn.active-income { color: #16a34a; }
+.tab-btn.active-expense { color: #dc2626; }
+
+#form-wrapper {
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    padding: 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-color: white;
+}
+
+/* General Input & Button Styles */
+.input-field {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    background-color: white;
+}
+.input-field:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px #c7d2fe;
+}
+
+.btn-primary {
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+@media (min-width: 640px) {
+    .chart-container {
+        height: 300px;
+    }
+}

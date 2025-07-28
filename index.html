@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Budget Tracker - Dashboard</title>
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen py-4 sm:py-8">
+
+<div class="container mx-auto max-w-md w-full p-4 sm:p-6 bg-white rounded-2xl shadow-lg">
+<header>
+          <h1 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-6">Dashboard Anggaran</h1>
+          </header>
+
+<section class="mb-6">
+          <h2 class="text-lg font-semibold uppercase text-gray-600">Saldo Anda</h2>
+          <p id="balance" class="text-3xl sm:text-4xl font-bold text-gray-900">Rp 0</p>
+          </section>
+
+<section class="grid grid-cols-2 gap-4 bg-gray-50 p-4 rounded-lg mb-6 shadow-inner">
+          <div class="text-center">
+                    <h3 class="text-md font-semibold uppercase text-green-600">Pemasukan</h3>
+                    <p id="money-plus" class="text-xl font-bold text-green-500">+ Rp 0</p>
+          </div>
+          <div class="text-center">
+                    <h3 class="text-md font-semibold uppercase text-red-600">Pengeluaran</h3>
+                    <p id="money-minus" class="text-xl font-bold text-red-500">- Rp 0</p>
+          </div>
+          </section>
+
+<div class="text-center mb-6">
+          <a href="history.html" class="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
+          Lihat Riwayat & Analisis &rarr;
+          </a>
+          </div>
+
+<main>
+          <div class="flex">
+          <button id="tab-income" class="tab-btn flex-1">Pemasukan</button>
+          <button id="tab-expense" class="tab-btn flex-1">Pengeluaran</button>
+          </div>
+
+          <div id="form-wrapper">
+          <form id="form">
+                    <div id="notification" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg relative mb-4"></div>
+                    <div class="mb-4">
+                              <label for="text" class="block text-sm font-medium text-gray-700 mb-1">Deskripsi</label>
+                              <input type="text" id="text" placeholder="Gaji bulanan, bayar kopi..." class="input-field" required>
+                    </div>
+                    <div class="mb-4">
+                              <label for="category" class="block text-sm font-medium text-gray-700 mb-1">Kategori</label>
+                              <select id="category" class="input-field" required></select>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                    <label for="amount" class="block text-sm font-medium text-gray-700 mb-1">Jumlah (Rp)</label>
+                    <input type="number" id="amount" placeholder="50000" class="input-field" required min="0">
+                    </div>
+                    <div>
+                    <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Tanggal</label>
+                    <input type="date" id="date" class="input-field" required>
+                    </div>
+                    </div>
+                    <div class="flex gap-2">
+                    <button type="submit" id="form-button" class="btn-primary w-full">Tambah Transaksi</button>
+                    <button type="button" id="cancel-edit" class="hidden btn-secondary w-full">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
